@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Start Server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                // Server should run on port 8081, because 
+                // Docker server might be  holding 8080
+                "PORT": "8081"
+            },
+            "program": "${workspaceFolder}/server/main.ts",
+            "preLaunchTask": "npm: compile:server",
+            "outFiles": [
+                "${workspaceFolder}/dist/server/**/*.js"
+            ]
+        }
+    ]
+}
