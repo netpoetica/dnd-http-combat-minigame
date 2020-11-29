@@ -1,0 +1,33 @@
+version: '3.2'
+services:
+    client:
+        ports:
+            - "8000:80"
+            - "443:443"
+        build:
+            context: ./
+            dockerfile: ./Dockerfile.client
+        depends_on: 
+            - server
+    
+    server:
+        ports:
+            - "8080:80"
+        depends_on: 
+            - redis
+        build:
+            context: ./
+            dockerfile: ./Dockerfile.server
+        environment: 
+            # Docker env serves host "redis"
+            - REDIS_HOST=redis
+            - REDIS_PORT=6379
+            - PORT=8080
+            - HOST=127.0.0.1
+
+    redis:
+        build:
+            context: ./
+            dockerfile: ./Dockerfile.redis
+        ports: 
+            - "6379:6379"

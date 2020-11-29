@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+    client:
+        # Use local volume for compiled client
+        volumes:
+            - ./dist/client/public:/usr/share/nginx/html
+    
+    redis:
+        # Storage space for redis data
+        volumes:
+            - $PWD/redis-data:/var/lib/redis
+            - $PWD/redis.conf:/usr/local/etc/redis/redis.conf

@@ -1,0 +1,21 @@
+FROM node:12
+
+# Application Directory
+WORKDIR /usr/src/app
+
+# We need the package.json from the root, because we're sharing 
+# the majority of dependencies between front- and back-end
+COPY ./package*.json ./
+
+RUN npm install
+
+# Note: both server/ and types/ folder will exist here
+# as we are sharing types between client and server, and
+# they live one level above server/ folder contents from
+# which they are required.
+COPY ./dist/server ./server
+COPY ./dist/types ./types
+
+EXPOSE 8080
+
+CMD [ "node",  "server/main.js" ]
