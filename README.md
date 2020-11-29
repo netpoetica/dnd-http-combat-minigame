@@ -1,6 +1,12 @@
 # D&D HTTP Combat Minigame
 
+## Startup
+
+You can run `make start` to build the Docker environment hosting redis, the express server, and the client application on `http://localhost:8000`. Alternatively, you can use  `make start-local`, which will mount local volumes, use local config, and store redis data on the local filesystem. The local version allows you to recompile the client (or watch->compile) for local development.
+
 ## Server
+
+You can run the server locally with `npm run start:server` - this will run on port `8081` aka `http://localhost:8081`, and allow you to run cURL commands against it. However, you will need a redis instance running.
 
 ## Client
 
