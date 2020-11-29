@@ -1,0 +1,12 @@
+{
+    "extends": "tslint:recommended",
+    "linterOptions": {
+        "exclude": [
+            "dist/",
+            "node_modules/"
+        ]
+    },
+    "rules": {
+        "semicolon": true
+    }
+}

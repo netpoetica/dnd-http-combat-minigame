@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "outDir": "./dist/client"
+    },
+    "include": [
+        "./client/**/*.ts*"
+    ]
+}

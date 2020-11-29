@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "noEmit": false,
+
+        // Allow .tsx files
+        "jsx": "react",
+
+        "lib": [
+            "ES5",
+            "ES2015.Promise",
+            "DOM",
+            "ES2015"
+        ],
+
+        "declaration": true,
+
+        "strict": true,
+        "noImplicitAny": false,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+
+        "typeRoots": [
+            "node_modules/@types",
+            "./types/**/*"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
