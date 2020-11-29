@@ -32,6 +32,9 @@ class DatabaseAdapter {
         });
 
         client.on("error", (error) => {
+            // Bail if we're running unit tests
+            if (process.env.NODE_ENV === 'test') return;
+
             // Allow errors to write to stderr for docker logs
             // tslint:disable-next-line: no-console
             console.error(error);

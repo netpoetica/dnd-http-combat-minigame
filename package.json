@@ -45,7 +45,7 @@
     "compile": "npm run compile:server && npm run compile:client",
     "start:server": "node dist/server/main.js",
     "clean": "rimraf dist && rimraf build/*.tsbuildinfo",
-    "test": "jest ./server",
+    "test": "NODE_ENV=test jest ./server",
     "lint": "tslint -p ./"
   },
   "author": "netpoetica <kthrosenberg@gmail.com>",
