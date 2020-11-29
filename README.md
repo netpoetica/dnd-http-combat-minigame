@@ -30,3 +30,5 @@ Force exiting Jest: Have you considered using `--detectOpenHandles` to detect as
 ```
 
 3. I die really fast! It is possible your character is generated with so few hit points that you die immediately, or, that the goblin is generated with so few hit points it dies on the first hit.
+
+4. Why are all the commits so close together in time? I built this application in a separate folder, and then copied/moved files into this repo to make more intentful commits that will propery compartmentalize ccertain parts of the project. I figured this would be more readable.
