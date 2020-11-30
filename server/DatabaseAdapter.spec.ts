@@ -34,5 +34,5 @@ describe.skip('DabaseAdapter', () => {
         loaded = await DatabaseAdapter.loadCharacter(briv.id) as ICharacter;
         expect(loaded).toBe(undefined);
         done();
-    })
+    });
 });
