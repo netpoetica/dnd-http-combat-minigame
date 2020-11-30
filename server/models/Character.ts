@@ -3,7 +3,7 @@ import {
 } from 'uuid';
 import {
     ClassName
-} from '../../types/Enums';
+} from '../../types/enums';
 import {
     ICharacterClass,
     ICharacter

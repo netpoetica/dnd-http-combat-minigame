@@ -6,7 +6,7 @@ import {
 import {
     DamageType,
     DefenseType
-} from '../../types/Enums';
+} from '../../types/enums';
 
 import * as Character from '../models/Character';
 

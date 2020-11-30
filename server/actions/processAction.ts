@@ -8,7 +8,7 @@ import {
 } from '../../types';
 import {
     DefenseType
-} from '../../types/Enums';
+} from '../../types/enums';
 
 export const processAddTempHP = (action: IAddTempHP) : ICharacter => {
     const {
