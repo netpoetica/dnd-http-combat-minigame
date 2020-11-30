@@ -11,8 +11,12 @@ This application has been tested on the following platforms/builds with the foll
 ```
 Mac OSX Catalina 10.15.6 (19G2021
 node v12.16.0 with npm 6.13.4
+
 Mac OSX Catalina 10.15.3 (19D76)
 node v12.18.4 with npm 6.14.6
+
+Windows 10 
+node v14.15.1 with npm 6.14.8
 ```
 
 and was tested in the following browsers:
@@ -25,7 +29,7 @@ Safari
 
 ## Server
 
-You can run the server locally with `npm run start:server` - this will run on port `8081` aka `http://localhost:8081`, and allow you to run cURL commands against it. However, you will need a redis instance running.
+You can run the server locally with `npm run start:server` - this will run on port `8080` aka `http://localhost:8080`, and allow you to run cURL commands against it. However, you will need a redis instance running.
 
 ## Client
 
@@ -48,6 +52,8 @@ Force exiting Jest: Have you considered using `--detectOpenHandles` to detect as
 [BABEL] Note: The code generator has deoptimised the styling of node_modules/three/build/three.module.js as it exceeds the max of 500KB.
 ```
 
-3. I die really fast! It is possible your character is generated with so few hit points that you die immediately, or, that the goblin is generated with so few hit points it dies on the first hit.
+3. "I die really fast!" It is possible your character is generated with so few hit points that you die immediately, or, that the goblin is generated with so few hit points it dies on the first hit.
 
-4. Why are all the commits so close together in time? I built this application in a separate folder, and then copied/moved files into this repo to make more intentful commits that will propery compartmentalize ccertain parts of the project. I figured this would be more readable.
+4. "Why are all the commits so close together in time?" I built this application in a separate folder, and then copied/moved files into this repo to make more intentful commits that will propery compartmentalize ccertain parts of the project. I figured this would be more readable.
+
+5. "I'm using windows and I don't have `make`!" This is sad news, but you can just copy the commands from the Makefile. I would normally use an equivalent `.bat` file to solve this problem, but it is easy enough to just `build` and `up` the docker-compose!

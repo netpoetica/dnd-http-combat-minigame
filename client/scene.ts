@@ -11,15 +11,12 @@ let camera: THREE.Camera | undefined;
 let scene: THREE.Scene | undefined;
 let renderer: THREE.Renderer | undefined;
 const models: {
-    idle?: Collada;
     jab?: Collada;
 } = {};
 
 export let action: THREE.AnimationAction | undefined;
 export let actions: {
-    idle?: THREE.AnimationAction;
     jab?: THREE.AnimationAction;
-    waiting?: THREE.AnimationAction;
 } = {};
 
 const clock = new THREE.Clock();
@@ -58,32 +55,15 @@ export function init() {
     // model
     const loader = new ColladaLoader();
 
-    // let goblin: Collada;
     loader.load('models/goblin-jab.dae', (object) => {
         models.jab = object;
         mixer = new THREE.AnimationMixer(object.scene);
         action = mixer.clipAction(object.animations[0]);
         actions.jab = action;
-        // action.play();
         object.scene.scale.set(2, 2, 2);
         scene?.add(object.scene);
         object.scene.receiveShadow = true;
     });
-
-    // loader.load('models/goblin-waiting.dae', (idle) => {
-    //     goblin.animations[1] = idle.animations[0];
-    //     actions.waiting = mixer?.clipAction(goblin.animations[1]);
-    //     actions.jab?.play();
-    //     // actions.idle?.play();
-    //     // actions.waiting?.play();
-    //     // mixer = new THREE.AnimationMixer(object.scene);
-    //     // action = mixer.clipAction(object.animations[0]);
-    //     // action.play();
-    //     // object.scene.scale.set(2, 2, 2);
-    //     // scene?.add(object.scene);
-    //     // object.scene.receiveShadow = true;
-    // });
-
 
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     // Types are broken in threejs.
@@ -95,15 +75,7 @@ export function init() {
     (renderer as any).shadowMap.enabled = true;
     container.appendChild(renderer.domElement);
 
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.target.set(0, 100, 0);
-    // controls.update();
-
     window.addEventListener('resize', onWindowResize, false);
-
-    // stats
-    // stats = new Stats();
-    // container.appendChild(stats.dom);
 }
 
 function onWindowResize() {

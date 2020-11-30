@@ -12,7 +12,7 @@ services:
     
     server:
         ports:
-            - "8080:80"
+            - "8081:80"
         depends_on: 
             - redis
         build:
@@ -22,7 +22,7 @@ services:
             # Docker env serves host "redis"
             - REDIS_HOST=redis
             - REDIS_PORT=6379
-            - PORT=8080
+            - PORT=8081
             - HOST=127.0.0.1
 
     redis:

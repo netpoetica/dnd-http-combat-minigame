@@ -16,6 +16,6 @@ RUN npm install
 COPY ./dist/server ./server
 COPY ./dist/types ./types
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD [ "node",  "server/main.js" ]
