@@ -29,6 +29,7 @@
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "cpy-cli": "^3.1.1",
+    "cross-env": "^7.0.2",
     "fantasy-content-generator": "^4.6.7",
     "jest": "^26.6.3",
     "mkdirp": "^1.0.4",
@@ -45,7 +46,7 @@
     "compile": "npm run compile:server && npm run compile:client",
     "start:server": "node dist/server/main.js",
     "clean": "rimraf dist && rimraf build/*.tsbuildinfo",
-    "test": "NODE_ENV=test jest ./server",
+    "test": "cross-env NODE_ENV=test jest ./server",
     "lint": "tslint -p ./"
   },
   "author": "netpoetica <kthrosenberg@gmail.com>",
