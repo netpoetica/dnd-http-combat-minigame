@@ -11,6 +11,8 @@ This application has been tested on the following platforms/builds with the foll
 ```
 Mac OSX Catalina 10.15.6 (19G2021
 node v12.16.0 with npm 6.13.4
+Mac OSX Catalina 10.15.3 (19D76)
+node v12.18.4 with npm 6.14.6
 ```
 
 and was tested in the following browsers:
